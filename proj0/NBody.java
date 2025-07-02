@@ -39,7 +39,8 @@ public class NBody {
 		return nBody.planets;
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
+		try {
 		double T = Double.parseDouble(args[0]);
 		double dt = Double.parseDouble(args[1]);
 		String filename = args[2];
@@ -48,5 +49,8 @@ public class NBody {
 		nBody.init(filename);
 
 		StdDraw.picture(0, 0, "images/starfield.jpg", 2, 2);		
+		} catch (Exception e) {
+		
+		}
 	}
 }
